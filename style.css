@@ -1,0 +1,335 @@
+ *{
+    list-style: none;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body{
+    box-sizing: border-box;
+    overflow: hidden;
+}
+header div img{
+    width: 120px;
+    height: 30px;
+    cursor: pointer;
+    margin-top:20px ;
+}
+header{
+    margin-right: 10px;
+    z-index: 1;
+    margin-left: 50px;
+    justify-content: space-between;
+    position: fixed;
+    display: flex;
+}
+header a{
+    line-height: 30px;
+    padding: 0 15px;
+    white-space: nowrap;
+    text-align: center;
+    display: inline-block;
+    font-size: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    color:#393c41;
+}
+.mdl{
+    margin-left: 200px;
+    position:relative;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    z-index: 5;
+}
+.mdl a:nth-child(6){
+    padding-right: 180px;
+}.hover{
+    background-color: rgba(128,128,128,0.15);
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    transition: all 0.7s;
+    border-radius: 10px;
+    height: 30px;
+    display: inline-block;
+}
+.mdl a:nth-child(1):hover~.hover{
+    opacity: 1;
+    left: 0;
+    width: 85px;
+}
+.mdl a:nth-child(2):hover~.hover{
+    opacity: 1;
+    left: 80px;
+    width: 108px;
+}
+.mdl a:nth-child(3):hover~.hover{
+    opacity: 1;
+    left: 189px;
+    width:85px;
+}
+.mdl a:nth-child(4):hover~.hover{
+    opacity: 1;
+    left: 275px;
+    width: 80px;
+}.mdl a:nth-child(5):hover~.hover{
+    opacity: 1;
+    left: 347px;
+    width: 80px;
+}.mdl a:nth-child(6):hover~.hover{
+    opacity: 1;
+    left: 430px;
+    width: 87px;
+}
+.mdl a:nth-child(7):hover~.hover{
+    opacity: 1;
+    left: 660px;
+    width: 65px;
+}.mdl a:nth-child(8):hover~.hover{
+    opacity: 1;
+    left: 735px;
+    width: 60px;
+}.mdl a:nth-child(9):hover~.hover{
+    opacity: 1;
+    left: 805px;
+    width: 65px;
+}
+.main-1{
+    display: flex;
+    overflow: auto;
+    flex: none;
+    width: 100%;
+    height: 100vh;
+    flex-flow: column nowrap;
+    scroll-snap-type: y mandatory;
+}
+.main-1>div{
+    text-align: center;
+    scroll-snap-align:center;
+    flex: none;
+    width: 100%;
+    height: 100%;
+}
+.main-1 div img{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center;
+}
+.main-2{
+    position: relative;
+}
+.head{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    top: 0;
+    height: 40vh;
+    align-items: center;
+}
+.head h1{
+    font-size: 45px;
+    font-weight: 500;
+    color: rgba(61,61, 61);
+    padding-bottom: 5px;
+}
+.head span{
+    color: rgba(53,53,53);
+    font-size: 17px;
+}
+.head a{
+    color: rgba(53,53,53);
+    text-decoration: underline;
+    cursor: pointer;
+    text-underline-position: under;
+}
+.head a:hover{
+    text-decoration-thickness:2px;
+}
+.login{
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+}
+.login div{
+    display: flex;
+    justify-content: center;
+}
+.btn div{
+    align-items:center;
+    margin-right: 15px;
+    margin-left: 15px;
+    width: 250px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 50px;
+}
+#order{
+    background-color: #393c41;
+    color: white;
+}
+#invm{
+    background-color: #eeebeb;
+    color: #393c41;
+}
+#order,#invm{
+    font-size: 14px;
+    font-weight: 500;
+}
+.blank{
+    height: 70px;
+}
+.arrow{
+    height: 60px;
+    font-size: 25px;
+    color: rgb(75, 75,75);
+    animation: down 1.5s ease infinite;
+}
+@keyframes down {
+    0%{
+        transform: translateY(0);
+    }
+    10%{
+        transform: translateY(5px);
+    }
+    20%{
+        transform: translateY(0);
+    }
+    30%{
+        transform: translateY(5px);
+    }
+    40%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(5px);
+    }
+    80%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(5px);
+    }
+    
+}
+
+.main .head span{
+    animation: show 1.5s;
+}
+@keyframes show {
+    0%{
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    40%{
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    70%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+.main .head h1{
+    animation: showspan 1s;
+}
+@keyframes showspan{
+    0%{
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.login #order{
+    animation: order 1s;
+}
+@keyframes order{
+    0%{
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.login #invm{
+    animation: invm 1s;
+}
+@keyframes invm{
+    0%{
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+}
+.head{
+    opacity: 0;
+}
+.head-1{
+    opacity: 1;
+    transition: all 1.5s;
+}
+.head-2{
+    opacity: 1;
+    transition: all 1.5s;
+}
+.head-3{
+    opacity: 1;
+    transition: all 1.5s;
+}
+.head-4{
+    opacity: 1;
+    transition: all 1.5s;
+}
+.head-5
+{
+    opacity: 1;
+    transition: all 1.5s;
+}
+.head-6{
+    opacity: 1;
+    transition: all 1.5s;
+}
+.login{
+    opacity: 0;
+}
+.login-1{
+    opacity: 1;
+    transition: all 1.5s;
+}
+.login-2,.login-3,.login-4,.login-5,.login-6{
+    opacity: 1;
+    transition: all 1.5s;
+    z-index: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
